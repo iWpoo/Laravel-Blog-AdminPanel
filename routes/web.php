@@ -12,10 +12,10 @@ Route::group(['namespace' => 'App\Http\Controllers\Post', 'prefix' => 'posts'], 
     Route::get('/{post}', ShowController::class)->name('post.show');
 
     Route::group(['namespace' => 'Comment', 'prefix' => '{post}/comments'], function () {
-        Route::post('/', 'StoreController')->name('post.comment.store');
+        Route::post('/', StoreController::class)->name('post.comment.store');
     });
     Route::group(['namespace' => 'Like', 'prefix' => '{post}/likes'], function () {
-        Route::post('/', 'StoreController')->name('post.like.store');
+        Route::post('/', StoreController::class)->name('post.like.store');
     });
 });
 
