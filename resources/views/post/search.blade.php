@@ -29,7 +29,7 @@
              <div class="clearfix"></div>
          </div>
          <div>
-            {{ $posts->links() }}
+            {{ $posts->withQueryString()->links() }}
          </div>
      </div>
 </div>

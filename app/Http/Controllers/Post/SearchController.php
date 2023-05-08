@@ -13,7 +13,7 @@ class SearchController extends Controller
     {
         $query = $request->input('q');
 
-        $posts = Post::search($query)->paginate(10);
+        $posts = Post::search($query)->paginate(1);
 
         foreach ($posts as $post) {
             $post->date = Carbon::parse($post->created_at);
