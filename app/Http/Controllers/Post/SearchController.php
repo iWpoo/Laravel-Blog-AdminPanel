@@ -19,10 +19,8 @@ class SearchController extends Controller
             $post->date = Carbon::parse($post->created_at);
         }
 
-        return view('post.search', [
-            'posts' => $posts, 
-            'query' => $query,
-            'title' => $query
-        ]);
+        $title = $query;
+
+        return view('post.search', compact('posts', 'query', 'title'));
     }
 }

@@ -10,6 +10,6 @@ class DeleteController extends Controller
     public function __invoke(User $user)
     {
         $user->delete();      
-        return redirect()->route('admin.user.index');
+        return redirect()->route('admin.user.index')->with('success', 'Запись была удалена');
     }
 }

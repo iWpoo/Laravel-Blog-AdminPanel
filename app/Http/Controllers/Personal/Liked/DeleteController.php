@@ -10,6 +10,6 @@ class DeleteController extends Controller
     public function __invoke(Post $post)
     {
         auth()->user()->likedPosts()->detach($post->id);
-        return redirect()->route('personal.liked.index');
+        return redirect()->route('personal.liked.index')->with('success', 'Запись была удалена');
     }
 }

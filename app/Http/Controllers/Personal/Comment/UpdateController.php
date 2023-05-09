@@ -12,6 +12,6 @@ class UpdateController extends Controller
     {
         $data = $request->validated();
         $comment->update($data);
-        return redirect()->route('personal.comment.index');
+        return redirect()->route('personal.comment.index')->with('success', 'Запись была обновлена');
     }
 }

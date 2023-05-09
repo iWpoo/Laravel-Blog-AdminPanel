@@ -13,6 +13,6 @@ class StoreController extends Controller
         $data = $request->validated();
         Tag::firstOrCreate($data);
         
-        return redirect()->route('admin.tag.index');
+        return redirect()->route('admin.tag.index')->with('success', 'Запись была добавлена');
     }
 }

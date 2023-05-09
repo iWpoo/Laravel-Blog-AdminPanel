@@ -21,6 +21,6 @@ class StoreController extends Controller
         $user = User::firstOrCreate(['email' => $data['email']], $data);
         Mail::to($data['email'])->send(new PasswordMail($password));
         event(new Registered($user));
-        return redirect()->route('admin.user.index');
+        return redirect()->route('admin.user.index')->with('success', 'Запись была добавлена');
     }
 }

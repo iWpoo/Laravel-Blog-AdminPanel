@@ -13,6 +13,6 @@ class UpdateController extends Controller
         $data = $request->validated();
         $category->update($data);
         
-        return redirect()->route('admin.category.show', $category->id);
+        return redirect()->route('admin.category.show', $category->id)->with('success', 'Запись была обновлена');
     }
 }

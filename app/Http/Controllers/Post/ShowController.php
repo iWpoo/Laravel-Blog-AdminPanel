@@ -19,11 +19,8 @@ class ShowController extends Controller
         
         $post->incrementViews();
 
-        return view('post.show', [
-            'post' => $post,
-            'date' => $date,
-            'recentPosts' => $recentPosts,
-            'title' => $post->title
-        ]);
+        $title = $post->title;
+
+        return view('post.show', compact('post', 'date', 'recentPosts', 'title'));
     }
 }

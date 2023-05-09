@@ -14,6 +14,6 @@ class DeleteController extends BaseController
         Storage::disk('public')->delete('images', $post->main_image);
         $post->tags()->detach();  
         $post->delete();   
-        return redirect()->route('admin.post.index');
+        return redirect()->route('admin.post.index')->with('success', 'Запись была удалена');
     }
 }

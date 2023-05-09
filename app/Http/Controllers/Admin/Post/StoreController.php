@@ -14,6 +14,6 @@ class StoreController extends BaseController
         $data = $request->validated();
         $this->service->store($data);
         
-        return redirect()->route('admin.post.index');
+        return redirect()->route('admin.post.index')->with('success', 'Запись была удалена')->with('success', 'Запись было добавлено');
     }
 }

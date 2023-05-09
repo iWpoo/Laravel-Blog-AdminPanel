@@ -12,6 +12,6 @@ class UpdateController extends Controller
     {
         $data = $request->validated();
         $user->update($data);
-        return redirect()->route('admin.user.show', $user->id);
+        return redirect()->route('admin.user.show', $user->id)->with('success', 'Запись была обновлена');
     }
 }

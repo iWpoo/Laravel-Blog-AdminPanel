@@ -24,10 +24,8 @@ class IndexController extends Controller
         ->get()
         ->take(20);    
 
-        return view('post.index', [
-            'posts' => $posts,
-            'recentPosts' => $recentPosts,
-            'title' => 'Blogname'
-        ]);
+        $title = 'Blogname';
+
+        return view('post.index', compact('posts', 'recentPosts', 'title'));
     }
 }

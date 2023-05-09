@@ -73,7 +73,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{ $data['tagsCount'] }}</h3>
+                <h3>{{ $data['usersCount'] }}</h3>
 
                 <p>Тэги</p>
               </div>
