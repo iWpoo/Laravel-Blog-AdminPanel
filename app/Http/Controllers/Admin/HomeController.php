@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Main;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -8,9 +8,9 @@ use App\Models\Post;
 use App\Models\Category;
 use App\Models\Tag;
 
-class IndexController extends Controller
+class HomeController extends Controller
 {
-    public function __invoke()
+    public function index()
     {
         $data = [
             'usersCount' => User::count(),

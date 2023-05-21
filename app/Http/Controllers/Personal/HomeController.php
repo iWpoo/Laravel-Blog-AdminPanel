@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Personal\Main;
+namespace App\Http\Controllers\Personal;
 
 use App\Http\Controllers\Controller;
 use App\Models\PostUserLike;
 use App\Models\Comment;
 
-class IndexController extends Controller
+class HomeController extends Controller
 {
-    public function __invoke()
+    public function index()
     {
         $data = [
             'postUserLikedCount' => PostUserLike::count(),
