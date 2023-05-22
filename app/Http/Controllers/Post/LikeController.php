@@ -7,7 +7,7 @@ use App\Models\Post;
 
 class LikeController extends Controller
 {
-    public function store(Post $post)
+    public function toggleLike(Post $post)
     {
         auth()->user()->likedPosts()->toggle($post->id);
         return response()->json([
