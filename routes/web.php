@@ -16,7 +16,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Post', 'prefix' => 'posts'], 
     });
 
     Route::group(['prefix' => '{post}/likes'], function () {
-        Route::post('/', 'LikeController@store')->name('post.like.store');
+        Route::post('/', 'LikeController@likeToggle')->name('post.like.store');
     });
 });
 
